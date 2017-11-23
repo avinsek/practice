@@ -1,0 +1,30 @@
+<?php
+
+/*A non-empty zero-indexed array A consisting of N integers is given.
+The array contains an odd number of elements, and each element of the array 
+can be paired with another element that has the same value, except for one element that is left unpaired.
+Return the value of an odd element. */
+
+$numbers = array(4, 5, 90, 4, 6, 6, 22,5, 90, 22, 11, 11, 8);
+$OddNumber=solution($numbers);
+print_r($OddNumber);
+
+function solution($array) {
+    // write your code in PHP7.0
+    sort($array);
+    for ($i=0; $i<count($array); $i+=2){
+	    
+	    if($array[$i]===$array[$i+1])
+	    {
+				continue;
+    	}
+    	else
+    	{
+				$Odd= $array[$i];
+				return($Odd);
+				break;
+	    }
+    }
+}
+
+?>
