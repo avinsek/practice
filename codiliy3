@@ -1,0 +1,31 @@
+<?php
+
+/*
+Write a function that, given a zero-indexed array A consisting of N integers, returns the number of distinct values in array A.
+*/
+
+$values = array(9, 1, 1, 2, 3, 8, 5, 3);
+
+function solution($array) {
+    // write your code in PHP7.0
+   	$counter =1;
+   	sort($array);
+for ($i=0; $i<count($array); $i++){
+	    if($array[$i]===$array[$i+1]){
+
+	   		continue;
+    			}
+			else
+				{	
+					$counter=$counter + 1;
+				}
+
+    }
+    	return($counter -1);
+}
+  
+$howMany =solution($values);
+print_r($howMany);
+
+?>
+
